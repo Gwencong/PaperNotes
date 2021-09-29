@@ -47,3 +47,5 @@ CutMix将一部分区域cut掉但不填充0像素而是随机填充训练集中�
 <img src="https://images.gitee.com/uploads/images/2021/0929/093459_e27e02ab_9801188.png" width="70%" height="70%" />
 </div>
 
+## Label Smoothing
+
