@@ -43,6 +43,7 @@ Cutout的提出主要是为了解决目标遮挡问题，通过对训练数据�
 
 ## CutMix
 CutMix将一部分区域cut掉但不填充0像素而是随机填充训练集中的其他数据的区域像素值，分类结果按一定的比例分配。cutmix、cutout、mixup的主要区别在于cutout和cutmix就是填充区域像素值的区别；mixup和cutmix是混合两种样本方式上的区别：mixup是将两张图按比例进行插值来混合样本，cutmix是采用cut部分区域再补丁的形式去混合图像，不会有图像混合后不自然的情形。
-<div align=cneter>
-<img src="https://images.gitee.com/uploads/images/2021/0929/093459_e27e02ab_9801188.png" width="50%" height="50%" />
+<div align=center>
+<img src="https://images.gitee.com/uploads/images/2021/0929/093459_e27e02ab_9801188.png" width="70%" height="70%" />
 </div>
+
