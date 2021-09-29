@@ -40,7 +40,7 @@ Cutout的提出主要是为了解决目标遮挡问题，通过对训练数据�
 + 专门从图像的输入中删除图像的重要特征，为了鼓励网络考虑不那么突出的特征。具体操作：在训练的每个epoch过程中，保存每张图片对应的最大激活特征图，在下一个训练回合，对每张图片的最大激活图进行上采样到和原图一样大，然后使用阈值划分为二值图，盖在原图上再输入到cnn中进行训练。因此，这样的操作可以有针对性的对目标进行遮挡。
 + 选择一个固定大小的正方形区域，然后将该区域填充为0即可，为了避免全0区域对训练的影响，需要对数据中心归一化到0。并且以一定概率（50%）允许擦除区域不完全在原图像中。
 
-<img src="C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210928220735263.png" alt="image-20210928220735263" style="zoom:70%;" />
+<img src="https://github.com/Gwencong/PaperNotes/blob/main/imgs/image-20210928220735263.png" alt="image-20210928220735263" style="zoom:70%;" />
 
 ## DropBlock
 
@@ -48,7 +48,7 @@ dropout用于全连接层能够提高模型泛化性能和减缓过拟合，但�
 
 DropBlock是一种针对卷积网络的dropout，按块来丢弃，是一种结构化的dropout形式，它将feature map相邻区域中的单元放在一起drop掉。除了卷积层外，在跳跃连接中应用DropbBlock可以提高精确度。
 
-![image-20210929181315166](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210929181315166.png)
+![image-20210929181315166](https://github.com/Gwencong/PaperNotes/blob/main/imgs/image-20210929181315166.png)
 
 ## Label Smoothing 
 
